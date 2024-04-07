@@ -24,8 +24,6 @@ const TodoContainer = () => {
     const [todos, setTodos] = useState(TODO_LISTS)
     const [todo, setTodo] = useState('')
 
-    console.log(todos)
-
     const addTodoHandler = newTodo => {
         setTodos([...todos, newTodo])
     }
