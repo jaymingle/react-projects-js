@@ -14,7 +14,7 @@ const CreateToDo = ({addTodoHandler, setTodo, todo}) => {
 
     const inputChangeHandler = e => {
         setTodo(e.target.value)
-        console.log(myTodo)
+        console.log(todo)
     }
 
     const formSubmitHandler = e => {
@@ -22,7 +22,7 @@ const CreateToDo = ({addTodoHandler, setTodo, todo}) => {
         if(todo){
             addTodoHandler({
                 id: Date.now(),
-                todo: myTodo,
+                todo: todo,
                 isDone: false
             })
         }
