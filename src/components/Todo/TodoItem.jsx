@@ -14,7 +14,6 @@ function TodoItem({todo, todos, setTodos}) {
         console.log(todo)
 
         setTodos(todos.filter((todo) => todo.id !== id))
-        // todos.filter(todo => todo.id !== id)
     }
 
     const handleDone = id => {
