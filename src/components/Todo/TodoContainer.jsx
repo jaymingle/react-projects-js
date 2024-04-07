@@ -27,7 +27,7 @@ const TodoContainer = () => {
     console.log(todos)
 
     const addTodoHandler = newTodo => {
-        setTodos([...todos, {id: Date.now, todo: newTodo.todo, isDone: newTodo.isDone}])
+        setTodos([...todos, newTodo])
     }
 
     return (
