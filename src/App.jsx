@@ -1,5 +1,5 @@
-import TodoLists from "./components/Todo/TodoLists"
 import {Box} from "@mui/material";
+import TodoContainer from "./components/Todo/TodoContainer.jsx";
 
 function App() {
 
@@ -11,7 +11,7 @@ function App() {
 
   return (
     <Box sx={styles}>
-      <TodoLists/>
+      <TodoContainer/>
     </Box>
   )
 }
