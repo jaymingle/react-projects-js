@@ -10,6 +10,11 @@ const CreateToDo = ({addTodoHandler, todo, setTodo}) => {
         width: "100%"
     })
 
+    const inputChangeHandler = e => {
+        setTodo(e.target.value)
+        console.log(todo)
+    }
+
     const formSubmitHandler = e => {
         e.preventDefault()
         if(todo){
@@ -26,7 +31,7 @@ const CreateToDo = ({addTodoHandler, todo, setTodo}) => {
     return (
         <StyledBox>
             <form onSubmit={formSubmitHandler} style={{ width: "100%", marginTop: "10px", display: "flex", justifyContent: "space-around" }}>
-                <TextField sx={{width: "60%"}}  id="standard-basic" placeholder="Enter Todo" variant="standard" value={todo} onChange={e => setTodo(e.target.value)} />
+                <TextField sx={{width: "60%"}}  id="standard-basic" placeholder="Enter Todo" variant="standard" value={todo} onChange={inputChangeHandler} />
                 <Button type="submit" variant="contained">Add Todo</Button>
             </form>
         </StyledBox>
