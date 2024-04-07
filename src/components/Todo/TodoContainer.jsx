@@ -31,7 +31,7 @@ const TodoContainer = () => {
     return (
         <div>
             <CreateToDo addTodoHandler={addTodoHandler} todo={todo} setTodo={setTodo} />
-            <TodoLists todos={todos} />
+            <TodoLists todos={todos} setTodos={setTodos} />
         </div>
     );
 };

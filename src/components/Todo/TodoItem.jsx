@@ -2,7 +2,7 @@ import React from 'react'
 import {AppBar, Box, IconButton, Stack, styled, Toolbar, Typography} from "@mui/material";
 import {Check, Delete} from "@mui/icons-material";
 
-function TodoItem({todo}) {
+function TodoItem({todo, todos}) {
 
     const StyledToolbar = styled(Toolbar)({
         display: "flex",
@@ -11,6 +11,9 @@ function TodoItem({todo}) {
 
     const handleDelete = id => {
         console.log(id)
+        console.log(todo)
+
+        todos.filter(todo => todo.id !== id)
     }
 
     const handleDone = id => {
