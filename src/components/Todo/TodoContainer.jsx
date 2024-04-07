@@ -22,6 +22,7 @@ const TODO_LISTS = [
 
 const TodoContainer = () => {
     const [todos, setTodos] = useState(TODO_LISTS)
+    const [todo, setTodo] = useState('')
 
     console.log(todos)
 
@@ -31,7 +32,7 @@ const TodoContainer = () => {
 
     return (
         <div>
-            <CreateToDo addTodoHandler={addTodoHandler} />
+            <CreateToDo addTodoHandler={addTodoHandler} todo={todo} setTodo={setTodo} />
             <TodoLists todos={todos} />
         </div>
     );
