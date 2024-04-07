@@ -1,10 +1,11 @@
 import React from 'react'
+import {Stack} from "@mui/material";
 
 function Todo() {
   return (
-    <div>
+    <Stack>
         The Todo
-    </div>
+    </Stack>
   )
 }
 
