@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Box, Button, styled, TextField} from "@mui/material";
 
 const CreateToDo = ({addTodoHandler, todo, setTodo}) => {
+
+    const [myTodo, setMyTodo] = useState('')
 
     const StyledBox = styled(Box)({
         display: 'flex',
@@ -11,16 +13,16 @@ const CreateToDo = ({addTodoHandler, todo, setTodo}) => {
     })
 
     const inputChangeHandler = e => {
-        setTodo(e.target.value)
+        setMyTodo(e.target.value)
         console.log(todo)
     }
 
     const formSubmitHandler = e => {
         e.preventDefault()
-        if(todo){
+        if(myTodo){
             addTodoHandler({
                 id: Date.now(),
-                todo: todo,
+                todo: myTodo,
                 isDone: false
             })
         }
@@ -31,7 +33,7 @@ const CreateToDo = ({addTodoHandler, todo, setTodo}) => {
     return (
         <StyledBox>
             <form onSubmit={formSubmitHandler} style={{ width: "100%", marginTop: "10px", display: "flex", justifyContent: "space-around" }}>
-                <TextField sx={{width: "60%"}}  id="standard-basic" placeholder="Enter Todo" variant="standard" value={todo} onChange={inputChangeHandler} />
+                <TextField sx={{width: "60%"}}  id="standard-basic" placeholder="Enter Todo" variant="standard" value={myTodo} onChange={inputChangeHandler} />
                 <Button type="submit" variant="contained">Add Todo</Button>
             </form>
         </StyledBox>
