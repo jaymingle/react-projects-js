@@ -1,12 +1,12 @@
 import React from 'react';
-import Todo from './Todo';
+import TodoItem from './TodoItem.jsx';
 import { Stack } from '@mui/material';
 
 const TodoLists = () => {
     return (
         <Stack>
             Todo Lists
-            <Todo/>
+            <TodoItem/>
         </Stack>
     );
 };

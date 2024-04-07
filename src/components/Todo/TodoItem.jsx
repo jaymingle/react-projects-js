@@ -1,14 +1,14 @@
 import React from 'react'
 import {Stack} from "@mui/material";
 
-function Todo() {
+function TodoItem() {
 
 
   return (
     <Stack>
-        The Todo
+        TodoItem
     </Stack>
   )
 }
 
-export default Todo
+export default TodoItem
