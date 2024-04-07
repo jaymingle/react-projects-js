@@ -5,12 +5,19 @@ const CreateToDo = () => {
 
     const StyledBox = styled(Box)({
         display: 'flex',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        margin: "10px 0"
     })
+
+    const formSubmitHandler = e => {
+        e.preventDefault()
+    }
 
     return (
         <StyledBox>
-            <TextField sx={{width: "80%"}} id="standard-basic" placeholder="Enter Todo" variant="standard" />
+            <form onSubmit={formSubmitHandler}>
+                <TextField sx={{width: "80%"}} id="standard-basic" placeholder="Enter Todo" variant="standard" />
+            </form>
         </StyledBox>
     );
 };
