@@ -10,7 +10,7 @@ function TodoItem() {
     })
 
   return (
-    <Stack>
+    <Stack sx={{margin: '0 10px'}}>
         <AppBar position="static">
             <StyledToolbar variant="dense">
                 <Typography variant="h6" color="inherit" component="div">
