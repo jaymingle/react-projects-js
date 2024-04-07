@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Box, Button, styled, TextField} from "@mui/material";
 
-const CreateToDo = ({addTodoHandler, todo, setTodo}) => {
+const CreateToDo = ({addTodoHandler}) => {
 
     const [myTodo, setMyTodo] = useState('')
 
@@ -14,7 +14,7 @@ const CreateToDo = ({addTodoHandler, todo, setTodo}) => {
 
     const inputChangeHandler = e => {
         setMyTodo(e.target.value)
-        console.log(todo)
+        console.log(myTodo)
     }
 
     const formSubmitHandler = e => {
@@ -27,7 +27,7 @@ const CreateToDo = ({addTodoHandler, todo, setTodo}) => {
             })
         }
 
-        setTodo('')
+        setMyTodo('')
     }
 
     return (
