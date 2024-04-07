@@ -24,9 +24,14 @@ const TodoContainer = () => {
     const [todo, setTodo] = useState(TODO_LISTS)
 
     console.log(todo)
+
+    const addTodoHandler = newTodo => {
+        setTodo([...todo, {id: Date.now, todo: newTodo.todo, isDone: newTodo.isDone}])
+    }
+
     return (
         <div>
-            <CreateToDo/>
+            <CreateToDo addTodoHandler={addTodoHandler} />
             <TodoLists todo={todo} />
         </div>
     );
