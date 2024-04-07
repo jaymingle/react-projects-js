@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box, styled, TextField} from "@mui/material";
+import {Box, Button, styled, TextField} from "@mui/material";
 
 const CreateToDo = () => {
 
@@ -17,6 +17,7 @@ const CreateToDo = () => {
         <StyledBox>
             <form onSubmit={formSubmitHandler}>
                 <TextField sx={{width: "80%"}} id="standard-basic" placeholder="Enter Todo" variant="standard" />
+                <Button type="submit">Add Todo</Button>
             </form>
         </StyledBox>
     );
