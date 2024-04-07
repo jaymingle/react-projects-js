@@ -6,7 +6,8 @@ const CreateToDo = () => {
     const StyledBox = styled(Box)({
         display: 'flex',
         justifyContent: 'center',
-        margin: "10px 0"
+        margin: "10px 0",
+        width: "100%"
     })
 
     const formSubmitHandler = e => {
@@ -16,8 +17,8 @@ const CreateToDo = () => {
     return (
         <StyledBox>
             <form onSubmit={formSubmitHandler}>
-                <TextField sx={{width: "80%"}} id="standard-basic" placeholder="Enter Todo" variant="standard" />
-                <Button type="submit">Add Todo</Button>
+                <TextField sx={{width: "50%"}} id="standard-basic" placeholder="Enter Todo" variant="standard" />
+                <Button type="submit" variant="contained">Add Todo</Button>
             </form>
         </StyledBox>
     );
