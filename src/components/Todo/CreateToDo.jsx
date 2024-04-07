@@ -12,8 +12,6 @@ const CreateToDo = ({addTodoHandler, todo, setTodo}) => {
 
     const formSubmitHandler = e => {
         e.preventDefault()
-        console.log('Clicked')
-
         if(todo){
             addTodoHandler({
                 id: Date.now(),
