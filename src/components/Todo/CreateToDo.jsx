@@ -33,7 +33,7 @@ const CreateToDo = ({addTodoHandler, setTodo, todo}) => {
     return (
         <StyledBox>
             <form onSubmit={formSubmitHandler} style={{ width: "100%", marginTop: "10px", display: "flex", justifyContent: "space-around" }}>
-                <TextField sx={{width: "60%"}}  id="standard-basic" placeholder="Enter Todo" variant="standard" value={myTodo} onChange={inputChangeHandler} />
+                <TextField sx={{width: "60%"}}  id="standard-basic" placeholder="Enter Todo" variant="standard" value={todo} onChange={e => inputChangeHandler(e)} />
                 <Button type="submit" variant="contained">Add Todo</Button>
             </form>
         </StyledBox>
