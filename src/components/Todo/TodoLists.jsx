@@ -2,15 +2,15 @@ import React from 'react';
 import TodoItem from './TodoItem.jsx';
 import { Stack } from '@mui/material';
 
-const TodoLists = ({todo}) => {
+const TodoLists = ({todos}) => {
 
-    console.log('TodoLists', todo)
+    console.log('TodoLists', todos)
 
     return (
         <Stack>
 
             {
-                todo.map(todoItem => <TodoItem key={todoItem.id} todo={todoItem}/>)
+                todos.map(todoItem => <TodoItem key={todoItem.id} todo={todoItem}/>)
             }
         </Stack>
     );
