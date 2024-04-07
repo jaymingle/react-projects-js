@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import CreateToDo from "./CreateToDo.jsx";
 import TodoLists from "./TodoLists.jsx";
+import {Box} from "@mui/material";
 
 const TODO_LISTS = [
     {
@@ -29,10 +30,10 @@ const TodoContainer = () => {
     }
 
     return (
-        <div>
+        <Box>
             <CreateToDo addTodoHandler={addTodoHandler} todo={todo} setTodo={setTodo} />
             <TodoLists todos={todos} setTodos={setTodos} />
-        </div>
+        </Box>
     );
 };
 

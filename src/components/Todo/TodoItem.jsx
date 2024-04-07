@@ -17,19 +17,15 @@ function TodoItem({todo, todos, setTodos}) {
     }
 
     const handleDone = id => {
-        console.log('Before isDone Update',todos)
-        console.log(id)
         setTodos(todos.map(todo => todo.id === id ? {...todo, isDone: !todo.isDone} : todo))
     }
-
-    console.log('After isDone Updated: ',todos)
 
 
     return (
     <Stack sx={{margin: '5px 0'}}>
         <AppBar position="static">
             <StyledToolbar variant="dense">
-                <Typography variant="h6" color="inherit" component="div">
+                <Typography sx={todo.isDone ? {textDecoration: 'line-through'} : {}} variant="h6" color="inherit" component="div">
                     {todo.todo}
                 </Typography>
                 <Box>
