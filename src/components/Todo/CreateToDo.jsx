@@ -14,7 +14,6 @@ const CreateToDo = ({addTodoHandler, setTodo, todo}) => {
 
     const inputChangeHandler = e => {
         setTodo(e.target.value)
-        console.log(todo)
     }
 
     const formSubmitHandler = e => {
