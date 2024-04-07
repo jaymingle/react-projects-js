@@ -4,8 +4,6 @@ import { Stack } from '@mui/material';
 
 const TodoLists = ({todos}) => {
 
-    console.log('TodoLists', todos)
-
     return (
         <Stack>
 
