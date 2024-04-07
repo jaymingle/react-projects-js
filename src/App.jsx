@@ -1,8 +1,10 @@
+import TodoLists from "./components/Todo/TodoLists"
+
 function App() {
 
   return (
     <>
-      Jay Mingle
+      <TodoLists/>
     </>
   )
 }
