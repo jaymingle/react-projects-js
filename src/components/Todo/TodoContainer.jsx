@@ -4,17 +4,17 @@ import TodoLists from "./TodoLists.jsx";
 
 const TODO_LISTS = [
     {
-        id: Date.now(),
+        id: 1,
         todo: 'Clean Room',
         isDone: false,
     },
     {
-        id: Date.now(),
+        id: 2,
         todo: 'Go to Church',
         isDone: false,
     },
     {
-        id: Date.now(),
+        id: 3,
         todo: 'Cook',
         isDone: false,
     }

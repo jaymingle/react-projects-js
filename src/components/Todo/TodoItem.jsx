@@ -2,25 +2,33 @@ import React from 'react'
 import {AppBar, Box, IconButton, Stack, styled, Toolbar, Typography} from "@mui/material";
 import {Check, Delete} from "@mui/icons-material";
 
-function TodoItem() {
+function TodoItem({todo}) {
 
     const StyledToolbar = styled(Toolbar)({
         display: "flex",
         justifyContent: "space-between",
     })
 
+    const handleDelete = id => {
+        console.log(id)
+    }
+
+    const handleDone = id => {
+        console.log(id)
+    }
+
   return (
-    <Stack sx={{margin: '0 10px'}}>
+    <Stack sx={{margin: '5px 0'}}>
         <AppBar position="static">
             <StyledToolbar variant="dense">
                 <Typography variant="h6" color="inherit" component="div">
-                    Photos
+                    {todo.todo}
                 </Typography>
                 <Box>
-                    <IconButton  color="inherit" aria-label="delete" sx={{ ml: 2 }}>
+                    <IconButton onClick={e => handleDelete(todo.id)} color="inherit" aria-label="delete" sx={{ ml: 2 }}>
                         <Delete />
                     </IconButton>
-                    <IconButton color="inherit" aria-label="check" sx={{ ml: 2 }}>
+                    <IconButton onClick={e => handleDone(todo.id)} color="inherit" aria-label="check" sx={{ ml: 2 }}>
                         <Check />
                     </IconButton>
                 </Box>
