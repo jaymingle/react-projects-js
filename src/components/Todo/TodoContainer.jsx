@@ -21,10 +21,13 @@ const TODO_LISTS = [
 ]
 
 const TodoContainer = () => {
+    const [todo, setTodo] = useState(TODO_LISTS)
+
+    console.log(todo)
     return (
         <div>
             <CreateToDo/>
-            <TodoLists/>
+            <TodoLists todo={todo} />
         </div>
     );
 };
