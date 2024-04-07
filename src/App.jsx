@@ -3,8 +3,14 @@ import {Box} from "@mui/material";
 
 function App() {
 
+    const styles = {
+        backgroundColor: 'yellow',
+        width: '800px',
+        margin: '0 auto',
+    }
+
   return (
-    <Box>
+    <Box sx={styles}>
       <TodoLists/>
     </Box>
   )
