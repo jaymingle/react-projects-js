@@ -17,10 +17,10 @@ function TodoItem() {
                     Photos
                 </Typography>
                 <Box>
-                    <IconButton edge="start" color="inherit" aria-label="menu" sx={{ ml: 2 }}>
+                    <IconButton  color="inherit" aria-label="delete" sx={{ ml: 2 }}>
                         <Delete />
                     </IconButton>
-                    <IconButton edge="start" color="inherit" aria-label="menu" sx={{ ml: 2 }}>
+                    <IconButton color="inherit" aria-label="check" sx={{ ml: 2 }}>
                         <Check />
                     </IconButton>
                 </Box>
