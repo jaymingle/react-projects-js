@@ -1,6 +1,6 @@
 import React from 'react'
 import {AppBar, Box, IconButton, Stack, styled, Toolbar, Typography} from "@mui/material";
-import {Check, Delete} from "@mui/icons-material";
+import {Check, Clear, Delete} from "@mui/icons-material";
 
 function TodoItem({todo, todos, setTodos}) {
 
@@ -33,7 +33,7 @@ function TodoItem({todo, todos, setTodos}) {
                         <Delete />
                     </IconButton>
                     <IconButton onClick={e => handleDone(todo.id)} color="inherit" aria-label="check" sx={{ ml: 2 }}>
-                        <Check />
+                        {todo.isDone ? <Clear /> : <Check />}
                     </IconButton>
                 </Box>
             </StyledToolbar>
