@@ -34,7 +34,6 @@ const TodoContainer = () => {
 
     const filterCompletedTodo = () => {
         setCompleted(value => !value)
-        console.log(completed)
     }
 
     return (
