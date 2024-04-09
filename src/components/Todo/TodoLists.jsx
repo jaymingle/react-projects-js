@@ -8,7 +8,7 @@ const TodoLists = ({todos, setTodos, setCompleted, filterCompleted}) => {
 
     return (
         <Stack>
-
+            {filterCompleted && <p>TodoLists: filter completed</p>}
             {
                 todos.map(todoItem => <TodoItem key={todoItem.id} todo={todoItem} todos={todos} setTodos={setTodos}/>)
             }
