@@ -2,11 +2,11 @@ import React from 'react';
 import TodoItem from './TodoItem.jsx';
 import { Stack } from '@mui/material';
 
-const TodoLists = ({todos, setTodos, setCompleted, filterCompleted}) => {
+const TodoLists = ({todos, setTodos, filterCompleted}) => {
 
     console.log('TodoLists Completed', filterCompleted);
 
-    const completedTodos = filterCompleted ? todos.filter(todo => todo.completed === filterCompleted) : todos;
+    const completedTodos = filterCompleted ? todos.filter(todo => todo.isDone === filterCompleted) : todos;
 
     return (
         <Stack>
