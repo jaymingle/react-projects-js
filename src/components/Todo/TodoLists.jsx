@@ -4,6 +4,8 @@ import { Stack } from '@mui/material';
 
 const TodoLists = ({todos, setTodos, setCompleted, filterCompleted}) => {
 
+    console.log('TodoLists Completed', filterCompleted);
+
     return (
         <Stack>
 
