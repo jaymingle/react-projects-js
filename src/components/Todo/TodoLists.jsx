@@ -4,8 +4,6 @@ import { Stack } from '@mui/material';
 
 const TodoLists = ({todos, setTodos, filterCompleted}) => {
 
-    console.log('TodoLists Completed', filterCompleted);
-
     const completedTodos = filterCompleted ? todos.filter(todo => todo.isDone === filterCompleted) : todos;
 
     return (
