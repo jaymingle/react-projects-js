@@ -29,9 +29,13 @@ const TodoContainer = () => {
         setTodos([...todos, newTodo])
     }
 
+    const filterCompletedTodo = () => {
+        console.log('Ghana')
+    }
+
     return (
         <Box>
-            <FormControlLabel control={<Checkbox />} label="Completed Todo" />
+            <FormControlLabel onChange={filterCompletedTodo} control={<Checkbox />} label="Completed Todo" />
 
             <CreateToDo addTodoHandler={addTodoHandler} todo={todo} setTodo={setTodo} />
             <TodoLists todos={todos} setTodos={setTodos} />
