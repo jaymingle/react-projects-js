@@ -6,11 +6,13 @@ const TodoLists = ({todos, setTodos, setCompleted, filterCompleted}) => {
 
     console.log('TodoLists Completed', filterCompleted);
 
+    const completedTodos = filterCompleted ? todos.filter(todo => todo.completed === filterCompleted) : todos;
+
     return (
         <Stack>
             {filterCompleted && <p>TodoLists: filter completed</p>}
             {
-                todos.map(todoItem => <TodoItem key={todoItem.id} todo={todoItem} todos={todos} setTodos={setTodos}/>)
+                completedTodos.map(todoItem => <TodoItem key={todoItem.id} todo={todoItem} todos={todos} setTodos={setTodos}/>)
             }
         </Stack>
     );
