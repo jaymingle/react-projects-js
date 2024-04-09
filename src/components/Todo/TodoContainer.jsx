@@ -23,7 +23,7 @@ const TODO_LISTS = [
 
 const TodoContainer = () => {
 
-    const [completed, setCompleted] = useState(true);
+    const [completed, setCompleted] = useState(false);
 
     const [todos, setTodos] = useState(TODO_LISTS)
     const [todo, setTodo] = useState('')
@@ -33,12 +33,14 @@ const TodoContainer = () => {
     }
 
     const filterCompletedTodo = () => {
-        console.log('Ghana')
+        setCompleted(value => !value)
     }
 
     return (
         <Box>
-            <FormControlLabel onChange={filterCompletedTodo} control={<Checkbox />} label="Completed Todo" />
+            <Box sx={{display: 'flex', marginTop: '30px'}}>
+                <FormControlLabel sx={{width: '250px', margin: 'auto'}} onChange={filterCompletedTodo} control={<Checkbox />} label="Completed Todo" />
+            </Box>
             <CreateToDo addTodoHandler={addTodoHandler} todo={todo} setTodo={setTodo} />
             <TodoLists todos={todos} setTodos={setTodos} />
         </Box>
