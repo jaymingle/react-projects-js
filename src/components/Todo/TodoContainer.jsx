@@ -22,6 +22,9 @@ const TODO_LISTS = [
 ]
 
 const TodoContainer = () => {
+
+    const [completed, setCompleted] = useState(true);
+
     const [todos, setTodos] = useState(TODO_LISTS)
     const [todo, setTodo] = useState('')
 
