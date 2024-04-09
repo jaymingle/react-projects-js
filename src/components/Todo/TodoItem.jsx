@@ -7,6 +7,8 @@ function TodoItem({todo, todos, setTodos}) {
     const StyledToolbar = styled(Toolbar)({
         display: "flex",
         justifyContent: "space-between",
+        backgroundColor: `${todo.isDone ? 'red' : 'inherit'}`
+
     })
 
     const handleDelete = id => {
