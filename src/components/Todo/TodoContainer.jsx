@@ -42,8 +42,9 @@ const TodoContainer = () => {
             <Box sx={{display: 'flex', marginTop: '30px'}}>
                 <FormControlLabel sx={{width: '250px', margin: 'auto'}} onChange={filterCompletedTodo} control={<Checkbox checked={completed} />} label="Completed Todo" />
             </Box>
+            {completed && <p>Checked values</p>}
             <CreateToDo addTodoHandler={addTodoHandler} todo={todo} setTodo={setTodo} />
-            <TodoLists todos={todos} setTodos={setTodos} />
+            <TodoLists todos={todos} setTodos={setTodos} filterCompleted={completed} setCompleted={setCompleted} />
         </Box>
     );
 };

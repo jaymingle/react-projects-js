@@ -2,7 +2,7 @@ import React from 'react';
 import TodoItem from './TodoItem.jsx';
 import { Stack } from '@mui/material';
 
-const TodoLists = ({todos, setTodos}) => {
+const TodoLists = ({todos, setTodos, setCompleted, filterCompleted}) => {
 
     return (
         <Stack>
