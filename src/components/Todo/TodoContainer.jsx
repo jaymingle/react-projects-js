@@ -44,7 +44,7 @@ const TodoContainer = () => {
             </Box>
             {completed && <p>Checked values</p>}
             <CreateToDo addTodoHandler={addTodoHandler} todo={todo} setTodo={setTodo} />
-            <TodoLists todos={todos} setTodos={setTodos} filterCompleted={completed} setCompleted={setCompleted} />
+            <TodoLists todos={todos} setTodos={setTodos} filterCompleted={completed} />
         </Box>
     );
 };
